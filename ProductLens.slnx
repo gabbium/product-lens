@@ -1,0 +1,16 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/ProductLens.Api/ProductLens.Api.csproj" Id="2168c350-c034-451e-9d7c-17ddad0971fe" />
+    <Project Path="src/ProductLens.AppHost/ProductLens.AppHost.csproj" Id="0dbe0fd9-d7fd-4993-bada-3c28fa4fe2c1" />
+    <Project Path="src/ProductLens.Application/ProductLens.Application.csproj" Id="16b69e5c-bd88-4814-a733-68a3da32f698" />
+    <Project Path="src/ProductLens.Domain/ProductLens.Domain.csproj" Id="fbb8fe56-3908-4b4d-b89a-fd296eeb8642" />
+    <Project Path="src/ProductLens.Infrastructure/ProductLens.Infrastructure.csproj" Id="98f9dcd5-4f66-41e9-8a37-aca993469452" />
+    <Project Path="src/ProductLens.ServiceDefaults/ProductLens.ServiceDefaults.csproj" Id="74f49f4d-8bb2-4962-9fb9-7985aa67429c" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/ProductLens.Api.AcceptanceTests/ProductLens.Api.AcceptanceTests.csproj" Id="7367e9dc-18fb-4878-8685-a7af06a8321b" />
+    <Project Path="tests/ProductLens.Application.FunctionalTests/ProductLens.Application.FunctionalTests.csproj" Id="ee740a21-bb43-4055-b4ef-2b7cd0124026" />
+    <Project Path="tests/ProductLens.Domain.UnitTests/ProductLens.Domain.UnitTests.csproj" Id="c18c0278-22e0-4389-b006-636f6fc36e8d" />
+    <Project Path="tests/ProductLens.Infrastructure.IntegrationTests/ProductLens.Infrastructure.IntegrationTests.csproj" Id="7209db47-dbb9-40ac-982f-c262c61fcf32" />
+  </Folder>
+</Solution>

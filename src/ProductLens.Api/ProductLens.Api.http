@@ -1,0 +1,6 @@
+@ProductLens.Api_HostAddress = http://localhost:5128
+
+GET {{ProductLens.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
