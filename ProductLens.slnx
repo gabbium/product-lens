@@ -1,4 +1,12 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="LICENSE" />
+    <File Path="README.md" />
+  </Folder>
   <Folder Name="/src/">
     <Project Path="src/ProductLens.Api/ProductLens.Api.csproj" Id="2168c350-c034-451e-9d7c-17ddad0971fe" />
     <Project Path="src/ProductLens.AppHost/ProductLens.AppHost.csproj" Id="0dbe0fd9-d7fd-4993-bada-3c28fa4fe2c1" />

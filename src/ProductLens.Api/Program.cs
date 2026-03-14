@@ -1,23 +1,26 @@
+using ProductLens.Api;
+using ProductLens.Application;
+using ProductLens.Infrastructure;
+using ProductLens.Infrastructure.Data;
+using ProductLens.ServiceDefaults;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.AddServiceDefaults();
 
-builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+builder.Services.AddApplicationServices();
+builder.Services.AddInfrastructureServices(builder.Configuration);
+builder.Services.AddApiServices(builder.Configuration);
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    await app.InitializeDatabaseAsync();
 }
 
-app.UseHttpsRedirection();
+app.UseServiceDefaults();
 
-app.UseAuthorization();
+app.UseApiServices();
 
-app.MapControllers();
-
-app.Run();
+await app.RunAsync();
