@@ -18,6 +18,11 @@ public class CreateProductCommandHandler(IApplicationDbContext context)
             price,
             command.Description);
 
+        if (product.Price.Currency == "BRL")
+        {
+            return ProductErrors.DiscontinueNotAllowedForDraft(product.Id);
+        }
+
         await context.Products.AddAsync(product, cancellationToken);
 
         await context.SaveChangesAsync(cancellationToken);
