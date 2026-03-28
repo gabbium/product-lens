@@ -19,7 +19,9 @@
     <PackageReference Include="Reqnroll" />
     <PackageReference Include="Reqnroll.Tools.MsBuild.Generation" />
     <PackageReference Include="Reqnroll.xUnit" />
+    <PackageReference Include="Respawn" />
     <PackageReference Include="Shouldly" />
+    <PackageReference Include="Testcontainers.PostgreSql" />
     <PackageReference Include="xunit" />
     <PackageReference Include="xunit.runner.visualstudio">
       <PrivateAssets>all</PrivateAssets>

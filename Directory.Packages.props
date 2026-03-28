@@ -5,13 +5,13 @@
   <ItemGroup>
     <PackageVersion Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.1" />
     <PackageVersion Include="AspNetCore.HealthChecks.UI.Client" Version="9.0.0" />
-    <PackageVersion Include="Aspire.Hosting.PostgreSQL" Version="13.1.2" />
-    <PackageVersion Include="coverlet.collector" Version="8.0.0" />
-    <PackageVersion Include="coverlet.msbuild" Version="8.0.0" />
+    <PackageVersion Include="Aspire.Hosting.PostgreSQL" Version="13.2.0" />
+    <PackageVersion Include="coverlet.collector" Version="8.0.1" />
+    <PackageVersion Include="coverlet.msbuild" Version="8.0.1" />
     <PackageVersion Include="EFCore.NamingConventions" Version="10.0.1" />
     <PackageVersion Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
-    <PackageVersion Include="Mediator.Abstractions" Version="3.0.1" />
-    <PackageVersion Include="Mediator.SourceGenerator" Version="3.0.1" />
+    <PackageVersion Include="Mediator.Abstractions" Version="3.0.2" />
+    <PackageVersion Include="Mediator.SourceGenerator" Version="3.0.2" />
     <PackageVersion Include="Microsoft.AspNetCore.Mvc.Testing" Version="10.0.5" />
     <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="10.0.5" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="10.0.5" />
@@ -25,17 +25,17 @@
     <PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="10.4.0" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.3.0" />
     <PackageVersion Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.1" />
-    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.15.0" />
-    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.15.0" />
+    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.15.1" />
+    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.15.1" />
     <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.15.1" />
     <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.15.0" />
     <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.15.0" />
     <PackageVersion Include="OutcomeCore" Version="1.2.0" />
-    <PackageVersion Include="Reqnroll" Version="3.3.3" />
-    <PackageVersion Include="Reqnroll.Tools.MsBuild.Generation" Version="3.3.3" />
-    <PackageVersion Include="Reqnroll.xUnit" Version="3.3.3" />
+    <PackageVersion Include="Reqnroll" Version="3.3.4" />
+    <PackageVersion Include="Reqnroll.Tools.MsBuild.Generation" Version="3.3.4" />
+    <PackageVersion Include="Reqnroll.xUnit" Version="3.3.4" />
     <PackageVersion Include="Respawn" Version="7.0.0" />
-    <PackageVersion Include="Scalar.AspNetCore" Version="2.13.8" />
+    <PackageVersion Include="Scalar.AspNetCore" Version="2.13.15" />
     <PackageVersion Include="Serilog.AspNetCore" Version="10.0.0" />
     <PackageVersion Include="Serilog.Exceptions.EntityFrameworkCore" Version="8.4.0" />
     <PackageVersion Include="Serilog.Sinks.OpenTelemetry" Version="4.2.0" />
