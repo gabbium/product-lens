@@ -7,6 +7,14 @@ public class ProductActionSteps(ScenarioContext context)
 {
     private readonly HttpClient _client = context.Get<HttpClient>();
 
+    [When("I list products with page {int} and size {int}")]
+    public async Task WhenIListProducts(int pageNumber, int pageSize)
+    {
+        var response = await _client.GetAsync($"/api/v1/products?pageNumber={pageNumber}&pageSize={pageSize}");
+
+        context.Set(response);
+    }
+
     [When("I get the product by id")]
     public async Task WhenIGetProduct()
     {
@@ -27,22 +35,6 @@ public class ProductActionSteps(ScenarioContext context)
         context.Set(response);
     }
 
-    [When("I change the product price to {decimal} {string}")]
-    public async Task WhenIChangeProductPrice(decimal amount, string currency)
-    {
-        var id = context.Get<Guid>();
-
-        var request = new ChangeProductPriceRequest
-        {
-            Amount = amount,
-            Currency = currency
-        };
-
-        var response = await _client.PutAsJsonAsync($"/api/v1/products/{id}/price", request);
-
-        context.Set(response);
-    }
-
     [When("I update the product details to {string} {string}")]
     public async Task WhenIUpdateProductDetails(string name, string description)
     {
@@ -55,6 +47,22 @@ public class ProductActionSteps(ScenarioContext context)
         };
 
         var response = await _client.PutAsJsonAsync($"/api/v1/products/{id}", request);
+
+        context.Set(response);
+    }
+
+    [When("I change the product price to {decimal} {string}")]
+    public async Task WhenIChangeProductPrice(decimal amount, string currency)
+    {
+        var id = context.Get<Guid>();
+
+        var request = new ChangeProductPriceRequest
+        {
+            Amount = amount,
+            Currency = currency
+        };
+
+        var response = await _client.PutAsJsonAsync($"/api/v1/products/{id}/price", request);
 
         context.Set(response);
     }

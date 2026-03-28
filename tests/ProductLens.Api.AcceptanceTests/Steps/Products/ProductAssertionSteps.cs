@@ -5,6 +5,28 @@ namespace ProductLens.Api.AcceptanceTests.Steps.Products;
 [Binding]
 public class ProductAssertionSteps(ScenarioContext context)
 {
+    [Then("the product details should be returned")]
+    public void ThenProductReturned()
+    {
+        var response = context.Get<HttpResponseMessage>();
+
+        response.StatusCode.ShouldBe(HttpStatusCode.OK);
+    }
+
+    [Then("the products should be returned")]
+    public async Task ThenProductsShouldBeReturned()
+    {
+        var response = context.Get<HttpResponseMessage>();
+
+        response.StatusCode.ShouldBe(HttpStatusCode.OK);
+
+        var result = await response.Content
+            .ReadFromJsonAsync<PagedList<ProductListItemResponse>>();
+
+        result.ShouldNotBeNull();
+        result.Items.ShouldNotBeEmpty();
+    }
+
     [Then("the product should be created")]
     public void ThenProductCreated()
     {
@@ -25,24 +47,16 @@ public class ProductAssertionSteps(ScenarioContext context)
         product.Id.ShouldNotBe(Guid.Empty);
     }
 
-    [Then("the product details should be returned")]
-    public async Task ThenProductReturned()
-    {
-        var response = context.Get<HttpResponseMessage>();
-
-        response.StatusCode.ShouldBe(HttpStatusCode.OK);
-    }
-
-    [Then("the product price should be changed")]
-    public void ThenProductPriceChanged()
+    [Then("the product should be updated")]
+    public void ThenProductUpdated()
     {
         var response = context.Get<HttpResponseMessage>();
 
         response.StatusCode.ShouldBe(HttpStatusCode.NoContent);
     }
 
-    [Then("the product should be updated")]
-    public void ThenProductUpdated()
+    [Then("the product price should be changed")]
+    public void ThenProductPriceChanged()
     {
         var response = context.Get<HttpResponseMessage>();
 
