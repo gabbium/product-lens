@@ -11,7 +11,7 @@ public static class DependencyInjection
     {
         var connectionString = configuration.GetConnectionString("ProductLensDb");
 
-        ArgumentNullException.ThrowIfNull(connectionString, nameof(connectionString));
+        ArgumentNullException.ThrowIfNull(connectionString);
 
         services.AddScoped<ISaveChangesInterceptor, AuditableEntityInterceptor>();
 

@@ -47,7 +47,7 @@ public class DefaultExceptionHandler : IExceptionHandler
         return true;
     }
 
-    private async Task HandleValidationException(
+    private static async Task HandleValidationException(
         HttpContext httpContext,
         Exception ex)
     {
@@ -69,7 +69,7 @@ public class DefaultExceptionHandler : IExceptionHandler
         await problem.ExecuteAsync(httpContext);
     }
 
-    private async Task HandleDomainException(
+    private static async Task HandleDomainException(
         HttpContext httpContext,
         Exception ex)
     {

@@ -8,16 +8,8 @@ public class ApplicationDbContextInitializer(
 {
     public async Task InitializeAsync()
     {
-        try
-        {
-            await MigrateAsync();
-            await SeedAsync();
-        }
-        catch (Exception ex)
-        {
-            logger.LogError(ex, "An error occurred while initializing the database");
-            throw;
-        }
+        await MigrateAsync();
+        await SeedAsync();
     }
 
     public async Task MigrateAsync()

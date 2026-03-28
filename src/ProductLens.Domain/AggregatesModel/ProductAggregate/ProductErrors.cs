@@ -2,13 +2,17 @@ namespace ProductLens.Domain.AggregatesModel.ProductAggregate;
 
 public static class ProductErrors
 {
+    private const string ProductIdKey = "productId";
+    private const string MaxLengthKey = "maxLength";
+    private const string MinKey = "min";
+
     public static Error NotFound(Guid id) =>
        Error.NotFound(
            code: "Product.NotFound",
            description: "Product was not found.",
            metadata: new Dictionary<string, object>
            {
-               ["productId"] = id
+               [ProductIdKey] = id
            });
 
     public static Error IdRequired() =>
@@ -27,7 +31,7 @@ public static class ProductErrors
             description: $"Product name must not exceed {maxLength} characters.",
             metadata: new Dictionary<string, object>
             {
-                ["maxLength"] = maxLength
+                [MaxLengthKey] = maxLength
             });
 
     public static Error DescriptionTooLong(int maxLength) =>
@@ -36,7 +40,7 @@ public static class ProductErrors
             description: $"Product description must not exceed {maxLength} characters.",
             metadata: new Dictionary<string, object>
             {
-                ["maxLength"] = maxLength
+                [MaxLengthKey] = maxLength
             });
 
     public static Error PriceMustBeGreaterThan(decimal min) =>
@@ -45,7 +49,7 @@ public static class ProductErrors
             description: $"Product price must be greater than {min}.",
             metadata: new Dictionary<string, object>
             {
-                ["min"] = min
+                [MinKey] = min
             });
 
     public static Error CurrencyRequired() =>
@@ -64,7 +68,7 @@ public static class ProductErrors
             description: "Modification is not allowed for a discontinued product.",
             metadata: new Dictionary<string, object>
             {
-                ["productId"] = id
+                [ProductIdKey] = id
             });
 
     public static Error ActivationNotAllowedForDiscontinued(Guid id) =>
@@ -73,7 +77,7 @@ public static class ProductErrors
             description: "Activation is not allowed for a discontinued product.",
             metadata: new Dictionary<string, object>
             {
-                ["productId"] = id
+                [ProductIdKey] = id
             });
 
     public static Error DiscontinueNotAllowedForDraft(Guid id) =>
@@ -82,7 +86,7 @@ public static class ProductErrors
             description: "A draft product cannot be discontinued.",
             metadata: new Dictionary<string, object>
             {
-                ["productId"] = id
+                [ProductIdKey] = id
             });
 
     public static Error DeleteNotAllowedForNonDraft(Guid id) =>
@@ -91,6 +95,6 @@ public static class ProductErrors
             description: "Only draft products can be deleted.",
             metadata: new Dictionary<string, object>
             {
-                ["productId"] = id
+                [ProductIdKey] = id
             });
 }
