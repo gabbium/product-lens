@@ -1,6 +1,9 @@
 <Solution>
   <Folder Name="/Solution Items/">
     <File Path=".editorconfig" />
+    <File Path=".github/workflows/ci-analysis.yml" />
+    <File Path=".github/workflows/ci-format.yml" />
+    <File Path=".github/workflows/pipeline.yml" />
     <File Path=".gitignore" />
     <File Path="Directory.Build.props" />
     <File Path="Directory.Packages.props" />
